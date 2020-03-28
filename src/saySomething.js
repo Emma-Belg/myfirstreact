@@ -2,7 +2,10 @@ import React from 'react';
 //You need to also import the css you are using for each module
 import "./App.css";
 
-//props = properties
+//props = properties or you could write the property name (as written in the App file inside curly brackets
+//like this
+//function Bye({name, message})
+//You do not need to then write the {props.name} below but simply {name}
 function Bye(props) {
     const sayBye = () => {
 
