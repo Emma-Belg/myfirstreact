@@ -15,10 +15,15 @@ import Bye, {OkCheckingTwoFunctionsInOneThing} from './saySomething';
 
 
 //create the component by writing a function
-function theNameDoesntNeedtoMatchWhatIsInTheIndexjs() {
+function App() {
 
     const [isRed, setRed] = useState(false);
     const[count, setCount] =useState(0);
+
+    const increment = () => {
+        setCount(count + 1);
+        setRed(!isRed);
+    };
     const sayHello = () => {
 
         console.log("Hello");
@@ -30,7 +35,9 @@ function theNameDoesntNeedtoMatchWhatIsInTheIndexjs() {
         <div className="App">
             <h1>My First React</h1>
             <h2>This is the App Component</h2>
-            <button></button>
+            <h3 className={isRed ? "red": ""}>Change to red</h3>
+            <button onClick={increment}>Increment</button>
+            <h2>{count}</h2>
             {/*vanilla js way:
         document.querySelector('.hello');
         hello.addEventListener().onclick()
@@ -55,7 +62,7 @@ function theNameDoesntNeedtoMatchWhatIsInTheIndexjs() {
 
 
 //Note - do not use the () after the function name, like you normally do when calling on a function.
-export default theNameDoesntNeedtoMatchWhatIsInTheIndexjs;
+export default App;
 
 
 /*import React from 'react';
