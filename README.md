@@ -1,4 +1,4 @@
-This project is filled with notes to self as I learn React, it is not practical or pretty but just a learning tool for me to get into the swing of learning all the ins and outs of React. I wrote down basically everything he said in the tutorial I was follow [here](https://www.youtube.com/watch?v=dGcsHMXbSOA), so it's really not nice to look at.
+This project is filled with notes to self as I learn React, it is not practical or pretty but just a learning tool for me to get into the swing of learning all the ins and outs of React. I wrote down basically everything he said in the tutorial I was following [here](https://www.youtube.com/watch?v=dGcsHMXbSOA), so it's really not nice to look at.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
