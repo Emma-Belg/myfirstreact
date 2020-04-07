@@ -18,12 +18,18 @@ import Bye, {OkCheckingTwoFunctionsInOneThing} from './saySomething';
 function App() {
 
     const [isRed, setRed] = useState(false);
-    const[count, setCount] =useState(0);
+    const [count, setCount] = useState(0);
 
     const increment = () => {
         setCount(count + 1);
         setRed(!isRed);
     };
+
+    const [users, setUsers] = useState([
+        {name: "Ed", message: "Hello there"},
+        {name: "Ted", message: "This is a story"},
+        {name: "Ned", message: "Ned Kelly here"},
+    ]);
     const sayHello = () => {
 
         console.log("Hello");
@@ -35,7 +41,10 @@ function App() {
         <div className="App">
             <h1>My First React</h1>
             <h2>This is the App Component</h2>
-            <h3 className={isRed ? "red": ""}>Change to red</h3>
+            {users.map(user => (
+                <tweet name={user.name} message={user.message} />
+            ))}
+            <h3 className={isRed ? "red" : ""}>Change to red</h3>
             <button onClick={increment}>Increment</button>
             <h2>{count}</h2>
             {/*vanilla js way:

@@ -22,6 +22,18 @@ function Bye(props) {
     );
 }
 
+function tweet({name, message}){
+
+    const tweet = () => {
+        console.log("tweet");
+    };
+    return (
+        <div className="SaySomething">
+            <h3>{name}</h3>
+            <h2>{message}</h2>
+    );
+}
+
 function OkCheckingTwoFunctionsInOneThing() {
     const seeingIfThisWorks = () => {
         console.log("I am learning cool stuff");
@@ -32,9 +44,11 @@ function OkCheckingTwoFunctionsInOneThing() {
             <button onClick={seeingIfThisWorks}> Learning new stuff</button>
         </div>
     )
-}
+};
+
 export default Bye;
 
 // as there can only be one default export per module the other functions or parameters you must export it like below
 // read more here: https://www.geeksforgeeks.org/reactjs-importing-exporting/
 export {OkCheckingTwoFunctionsInOneThing};
+        export {tweet};
